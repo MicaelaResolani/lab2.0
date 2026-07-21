@@ -1,59 +1,32 @@
-# SistemaHospital
+# 🏥 Sistema de Gestión Hospitalaria y Laboratorio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.14.
+> Aplicación web frontend desarrollada con **Angular** y **Angular Material**, diseñada para la gestión clínica, triage de pacientes y control de suministros médicos.
 
-## Development server
+🌐 **Demo en vivo:** [https://astonishing-pika-acd4a0.netlify.app](https://astonishing-pika-acd4a0.netlify.app)
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## 🚀 Acerca del Proyecto
+Este proyecto simula un entorno clínico real, integrando la experiencia del ámbito de la salud con el desarrollo de software moderno. Está pensado para agilizar procesos de atención, visualización de equipamiento médico y organización interna mediante una interfaz rápida y responsiva.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🛠️ Tecnologías Utilizadas
+* **Frontend:** Angular (v21)
+* **UI / Estilos:** Angular Material, CSS3, Flexbox/Grid
+* **Control de versiones:** Git & GitHub
+* **Despliegue:** Netlify
 
-## Code scaffolding
+## ✨ Características Principales
+* 🖥️ **Interfaz intuitiva** basada en componentes reutilizables de Angular.
+* 📋 **Módulos de gestión** orientados al flujo de trabajo hospitalario.
+* 📱 **Diseño Responsivo** adaptado para diferentes dispositivos.
+* ⚡ **Optimización de rutas** y navegación fluida tipo SPA (Single Page Application).
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+## 📦 Ejecución local del proyecto
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Si querés clonar y ejecutar este repositorio en tu máquina local, seguí estos pasos:
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. **Clonar el repositorio:**
+   ```bash
+   git clone [https://github.com/MicaelaResolani/lab2.0.git](https://github.com/MicaelaResolani/lab2.0.git)
