@@ -1,0 +1,122 @@
+/* Estilos generales del contenedor */
+:host {
+  display: block;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  min-height: 100vh;
+}
+
+/* Pantalla de Inicio de Sesión */
+.login-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.login-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-card h2 {
+  margin-bottom: 1.5rem;
+  color: #0f172a;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.error-msg {
+  color: #dc2626;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+/* Panel Principal (App Shell) */
+.app-shell {
+  padding: 2rem;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+
+.user-badge {
+  background: #e2e8f0;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  color: #334155;
+}
+
+.btn-logout {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-logout:hover {
+  background-color: #dc2626;
+}
+
+/* Tarjetas de Muestras */
+.muestra-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin-bottom: 1rem;
+}
+
+.rechazo-form {
+  margin-top: 1rem;
+  display: flex;
+  gap: 10px;
+}
+
+.rechazo-form select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #cbd5e1;
+}

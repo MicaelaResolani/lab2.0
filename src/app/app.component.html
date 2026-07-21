@@ -1,0 +1,63 @@
+<!-- PANTALLA DE LOGIN -->
+<div class="login-overlay" *ngIf="!isLoggedIn">
+  <div class="login-card">
+    <h2>Medical Tech Pro</h2>
+    <p class="error-msg" *ngIf="errorMessage">{{ errorMessage }}</p>
+    
+    <form (submit)="login(); $event.preventDefault()">
+      <input 
+        type="text" 
+        placeholder="Usuario o Matrícula" 
+        [(ngModel)]="usuario" 
+        name="usuario" 
+        required 
+      />
+      <input 
+        type="password" 
+        placeholder="Contraseña" 
+        [(ngModel)]="password" 
+        name="password" 
+        required 
+      />
+      <button type="submit" class="btn-primary">Ingresar al Sistema</button>
+    </form>
+  </div>
+</div>
+
+<!-- PANEL PRINCIPAL (APP SHELL) -->
+<div class="app-shell" *ngIf="isLoggedIn">
+  <header class="app-header">
+    <h1>Medical Tech Pro - Gestión de Muestras</h1>
+    <div style="display: flex; align-items: center; gap: 1rem;">
+      <span class="user-badge">Usuario: {{ usuario }}</span>
+      <button class="btn-logout" (click)="logout()">Cerrar Sesión</button>
+    </div>
+  </header>
+
+  <main>
+    <h2>Listado de Muestras Recientes</h2>
+    
+    <div *ngFor="let m of muestras" class="muestra-card">
+      <p><strong>ID Muestra:</strong> {{ m.id }}</p>
+      <p><strong>Paciente:</strong> {{ m.paciente }}</p>
+      <p>
+        <strong>Estado:</strong> 
+        <span [style.color]="m.estado === 'Aceptada' ? 'green' : (m.estado === 'Rechazada' ? 'red' : 'orange')">
+          {{ m.estado }}
+        </span>
+        <span *ngIf="m.estado === 'Rechazada'"> (Motivo: {{ m.motivoRechazo }})</span>
+      </p>
+
+      <div style="display: flex; gap: 10px; margin-top: 1rem;" *ngIf="m.estado === 'Pendiente'">
+        <button class="btn-primary" style="background-color: #16a34a; width: auto; padding: 8px 16px;" (click)="aceptarMuestra(m)">Aceptar</button>
+        
+        <div class="rechazo-form" style="margin-top: 0;">
+          <select [(ngModel)]="m.motivoRechazo">
+            <option *ngFor="let motivo of motivosRechazo" [value]="motivo">{{ motivo }}</option>
+          </select>
+          <button class="btn-logout" style="background-color: #dc2626;" (click)="rechazarMuestra(m)">Rechazar</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
